@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <Button
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:background="@drawable/ic_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10sp"
+        android:id="@+id/homeButton"/>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <ImageView
+
+        android:id="@+id/avatar"
+        android:layout_width="275sp"
+        android:layout_height="275sp"
+        android:layout_gravity="center"
+        android:layout_margin="15sp"
+        android:background="@color/colorPrimary"
+        android:padding="3sp"
+        android:src="@drawable/git_logo"
+        android:transitionName="thumbnailTransition"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.243" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll1"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/avatar">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            app:layout_constraintBottom_toBottomOf="@+id/avatar"
+            app:layout_constraintEnd_toEndOf="@+id/avatar"
+            app:layout_constraintStart_toStartOf="@+id/avatar"
+            app:layout_constraintTop_toTopOf="@+id/avatar"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/username2"
+            android:text="Username"
+            android:fontFamily="@font/segoeuib"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:id="@+id/fullname"
+            android:text="a.k.a "
+            android:textAlignment="center"
+            android:fontFamily="@font/segoeui"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email"
+            android:textAlignment="center"
+            android:text="Email : "
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/segoeuii"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ll1"
+        android:id="@+id/ll2"
+        android:layout_marginTop="20sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\nfollowers"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:padding="5sp"
+            android:id="@+id/followers"/>
+        <View
+            android:layout_width="1sp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\nfollowing"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:padding="5sp"
+            android:id="@+id/following"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ll2"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:id="@+id/imgurl"
+            android:text="Image url : "/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/segoeui"
+            android:id="@+id/repositories"
+            android:text="Load Repositories"
+            android:textAllCaps="false"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:transitionName="buttonAnim"/>
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
